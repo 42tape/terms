@@ -1,80 +1,103 @@
-/* Dropbox-like 2-row header (Just the Docs + header_custom) */
+---
+---
 
-/* 1단: 로고(좌) + 검색(중앙) + (우측 공간) */
-.site-header,
-header.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+/* 2-row header layout for 42Tape Terms */
+
+/* 헤더 전체 컨테이너 */
+.terms-header {
+  width: 100%;
   background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 2rem;
+}
+
+/* 1단: 로고(좌) + 검색(중앙) */
+.terms-header__top {
   display: flex;
-  flex-wrap: wrap; /* 2단 구성을 위해 wrap */
   align-items: center;
+  padding: 1rem 0;
+  gap: 2rem;
 }
 
-/* 로고(=site title)는 좌측 */
-.site-title,
-header.site-header .site-title {
-  order: 1;
+/* 로고 */
+.terms-header__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  flex-shrink: 0;
 }
 
-/* 검색은 가운데 */
-.site-header .search,
-header.site-header .search {
-  order: 2;
-  flex: 1 1 520px;
-  max-width: 520px;
+/* 검색창 영역 */
+.terms-header__search {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.terms-header__search .search-input {
   width: 100%;
-  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.95rem;
 }
 
-/* (있다면) 우측 보조 영역은 우측 정렬 */
-.site-header .aux-nav,
-header.site-header .aux-nav,
-.site-header .site-button,
-header.site-header .site-button {
-  order: 3;
-  margin-left: auto;
+.terms-header__search .search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* 2단: 약관 메뉴(좌측 정렬, 전체 폭) */
-.terms-legal-nav {
-  order: 10;
-  flex: 0 0 100%;
-  width: 100%;
+/* 2단: 메뉴 링크들 (좌측 정렬) */
+.terms-header__bottom {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 1.75rem;
-  align-items: center;
-  padding: 0.75rem 0 0.5rem;
+  gap: 2rem;
+  padding: 0.75rem 0;
   border-top: 1px solid #e5e7eb;
 }
 
-.terms-legal-nav__link {
+.terms-header__nav-link {
   font-size: 0.95rem;
   font-weight: 500;
   color: #4b5563;
   text-decoration: none;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+  white-space: nowrap;
+  transition: color 0.2s;
 }
 
-.terms-legal-nav__link:hover {
+.terms-header__nav-link:hover {
   color: #111827;
 }
 
-.terms-legal-nav__link.is-active {
+.terms-header__nav-link.is-active {
   color: #111827;
   border-bottom: 2px solid #2563eb;
 }
 
+/* 반응형 */
 @media (max-width: 960px) {
-  .terms-legal-nav {
-    gap: 1.0rem;
+  .terms-header {
+    padding: 0 1rem;
   }
 
-  .site-header .search,
-  header.site-header .search {
+  .terms-header__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .terms-header__search {
     max-width: 100%;
+    width: 100%;
+  }
+
+  .terms-header__bottom {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .terms-header__nav-link {
+    font-size: 0.875rem;
   }
 }
