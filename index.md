@@ -1,5 +1,6 @@
 ---
 title: 42Tape 약관 안내
+nav_order: 1
 ---
 
 # 42Tape 약관 안내
