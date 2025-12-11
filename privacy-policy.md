@@ -3,8 +3,6 @@ title: 개인정보처리방침
 nav_order: 3
 ---
 
-{% include terms-top-nav.html %}
-
 # 개인정보처리방침
 
 **최종 업데이트**: \[2025.12.05\]  

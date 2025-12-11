@@ -1,47 +1,57 @@
-.terms-header {
+/* Dropbox-like 2-row header (Just the Docs + header_custom) */
+
+/* 1단: 로고(좌) + 검색(중앙) + (우측 공간) */
+.site-header,
+header.site-header {
   position: sticky;
   top: 0;
   z-index: 50;
+  background: #fff;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.75rem 2.0rem 1rem;
-  border-bottom: 1px solid #e5e7eb;
-  background-color: #ffffff;
-}
-
-.terms-header__top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  flex-wrap: wrap; /* 2단 구성을 위해 wrap */
   align-items: center;
 }
 
-.terms-header__logo {
-  justify-self: flex-start;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #111827;
+/* 로고(=site title)는 좌측 */
+.site-title,
+header.site-header .site-title {
+  order: 1;
 }
 
-.terms-header__search {
-  justify-self: center;
-  max-width: 480px;
+/* 검색은 가운데 */
+.site-header .search,
+header.site-header .search {
+  order: 2;
+  flex: 1 1 520px;
+  max-width: 520px;
   width: 100%;
+  margin-inline: auto;
 }
 
-.terms-header__search .search-input {
+/* (있다면) 우측 보조 영역은 우측 정렬 */
+.site-header .aux-nav,
+header.site-header .aux-nav,
+.site-header .site-button,
+header.site-header .site-button {
+  order: 3;
+  margin-left: auto;
+}
+
+/* 2단: 약관 메뉴(좌측 정렬, 전체 폭) */
+.terms-legal-nav {
+  order: 10;
+  flex: 0 0 100%;
   width: 100%;
-}
-
-.terms-header__bottom {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.0rem;
+  justify-content: flex-start;
+  gap: 1.75rem;
   align-items: center;
-  margin-top: 0.25rem;
+  padding: 0.75rem 0 0.5rem;
+  border-top: 1px solid #e5e7eb;
 }
 
-.terms-header__nav-link {
+.terms-legal-nav__link {
   font-size: 0.95rem;
   font-weight: 500;
   color: #4b5563;
@@ -49,34 +59,22 @@
   padding-bottom: 0.25rem;
 }
 
-.terms-header__nav-link:hover {
+.terms-legal-nav__link:hover {
   color: #111827;
 }
 
-.terms-header__nav-link.is-active {
+.terms-legal-nav__link.is-active {
   color: #111827;
   border-bottom: 2px solid #2563eb;
 }
 
 @media (max-width: 960px) {
-  .terms-header {
-    padding-inline: 1.0rem;
+  .terms-legal-nav {
+    gap: 1.0rem;
   }
 
-  .terms-header__top {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 0.5rem;
-  }
-
-  .terms-header__logo {
-    justify-self: flex-start;
-  }
-
-  .terms-header__search {
-    justify-self: stretch;
-  }
-
-  .terms-header__bottom {
-    gap: 1.25rem;
+  .site-header .search,
+  header.site-header .search {
+    max-width: 100%;
   }
 }

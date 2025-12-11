@@ -3,8 +3,6 @@ title: 환불 및 결제 정책
 nav_order: 4
 ---
 
-{% include terms-top-nav.html %}
-
 # 42Tape 환불 및 결제 정책
 
 **최종 업데이트**: 2025.12.11  
