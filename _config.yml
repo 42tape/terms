@@ -3,5 +3,12 @@ remote_theme: just-the-docs/just-the-docs
 title: 42Tape
 description: 42Tape 서비스 이용약관, 개인정보처리방침, 환불 및 결제 정책
 
+# 검색 활성화
 search_enabled: true
-nav_enabled: false
+search:
+  button: false
+
+# 헤더 링크
+aux_links:
+  "42Tape":
+    - "https://42tape.com"
