@@ -1,6 +1,7 @@
 ---
 title: 서비스 이용약관
-nav_order: 2
+toc: true
+toc_sticky: true
 ---
 
 # 42Tape 서비스 이용약관

@@ -1,6 +1,7 @@
 ---
 title: 개인정보처리방침
-nav_order: 3
+toc: true
+toc_sticky: true
 ---
 
 # 개인정보처리방침

@@ -1,6 +1,7 @@
 ---
 title: 환불 및 결제 정책
-nav_order: 4
+toc: true
+toc_sticky: true
 ---
 
 # 42Tape 환불 및 결제 정책

@@ -1,0 +1,9 @@
+main:
+  - title: "42Tape 약관 안내"
+    url: /
+  - title: "서비스 이용약관"
+    url: /service-terms
+  - title: "개인정보처리방침"
+    url: /privacy-policy
+  - title: "환불 및 결제 정책"
+    url: /refund-and-payment-policy
