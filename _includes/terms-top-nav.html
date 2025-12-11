@@ -1,6 +1,22 @@
-<nav class="terms-top-nav">
-  <a href="{{ '/' | relative_url }}" class="terms-top-nav__link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">42Tape 약관 안내</a>
-  <a href="{{ '/service-terms.html' | relative_url }}" class="terms-top-nav__link{% if page.url contains '/service-terms' %} is-active{% endif %}">서비스 이용약관</a>
-  <a href="{{ '/privacy-policy.html' | relative_url }}" class="terms-top-nav__link{% if page.url contains '/privacy-policy' %} is-active{% endif %}">개인정보처리방침</a>
-  <a href="{{ '/refund-and-payment-policy.html' | relative_url }}" class="terms-top-nav__link{% if page.url contains '/refund-and-payment-policy' %} is-active{% endif %}">환불 및 결제 정책</a>
+<nav class="terms-header">
+  <div class="terms-header__top">
+    <div class="terms-header__logo">42Tape</div>
+    <div class="terms-header__search search">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Search 42Tape Terms"
+        aria-label="Search 42Tape Terms"
+        autocomplete="off"
+      />
+    </div>
+  </div>
+
+  <div class="terms-header__bottom">
+    <a href="{{ '/' | relative_url }}" class="terms-header__nav-link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">42Tape 약관 안내</a>
+    <a href="{{ '/service-terms.html' | relative_url }}" class="terms-header__nav-link{% if page.url contains '/service-terms' %} is-active{% endif %}">서비스 이용약관</a>
+    <a href="{{ '/privacy-policy.html' | relative_url }}" class="terms-header__nav-link{% if page.url contains '/privacy-policy' %} is-active{% endif %}">개인정보처리방침</a>
+    <a href="{{ '/refund-and-payment-policy.html' | relative_url }}" class="terms-header__nav-link{% if page.url contains '/refund-and-payment-policy' %} is-active{% endif %}">환불 및 결제 정책</a>
+  </div>
 </nav>
