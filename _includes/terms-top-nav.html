@@ -1,0 +1,6 @@
+<nav class="terms-top-nav">
+  <a href="{{ '/' | relative_url }}" class="terms-top-nav__link{% if page.url == '/' or page.url == '/index.html' %} is-active{% endif %}">42Tape 약관 안내</a>
+  <a href="{{ '/service-terms.html' | relative_url }}" class="terms-top-nav__link{% if page.url contains '/service-terms' %} is-active{% endif %}">서비스 이용약관</a>
+  <a href="{{ '/privacy-policy.html' | relative_url }}" class="terms-top-nav__link{% if page.url contains '/privacy-policy' %} is-active{% endif %}">개인정보처리방침</a>
+  <a href="{{ '/refund-and-payment-policy.html' | relative_url }}" class="terms-top-nav__link{% if page.url contains '/refund-and-payment-policy' %} is-active{% endif %}">환불 및 결제 정책</a>
+</nav>

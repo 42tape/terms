@@ -3,6 +3,8 @@ title: 42Tape 약관 안내
 nav_order: 1
 ---
 
+{% include terms-top-nav.html %}
+
 # 42Tape 약관 안내
 
 42Tape 서비스 이용과 관련된 주요 약관 문서를 한곳에서 확인할 수 있는 페이지입니다.
