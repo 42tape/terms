@@ -1,11 +1,18 @@
 remote_theme: mmistakes/minimal-mistakes
 
-title: 42Tape
+# Plugins
+plugins:
+  - jekyll-include-cache
+
+logo: "/assets/images/logo_white_width.png"
+masthead_title: " "
 description: 42Tape 서비스 이용약관, 개인정보처리방침, 환불 및 결제 정책
 url: "https://42tape.com"
 
 # 검색 활성화
 search: true
+search_full_content: true
+search_provider: lunr
 
 # 사이트 설정
 minimal_mistakes_skin: "default"
